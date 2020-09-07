@@ -149,11 +149,28 @@ h3 {
     margin-top: 20px;
     display: inline-block;
     transition: all .3s ease;
+    border: 2px solid;
 }
 
 .button:hover {
     color: white;
     background-color: #e33000;
+}
+
+.button.hollow {
+    background-color: white;
+    color: #fe4918;
+}
+
+.button.hollow:hover {
+    color: white;
+    background-color: #fe4918;
+}
+
+.button.transparente {
+    color: white;
+    background-color: transparent;
+    border-color: white;
 }
 
 .float-right {
@@ -194,6 +211,14 @@ ul {
     margin: 0;
 }
 
+.fs-20 {
+    font-size: 75px !important;
+}
+
+.fs-60 {
+    font-size: 20px !important;
+}
+
 
 /*Header*/
 
@@ -220,6 +245,26 @@ nav.redes-sociales a {
 
 nav.redes-sociales a:last-of-type {
     margin-right: 0;
+}
+
+nav.redes-sociales a:nth-child(1):hover {
+    color: #3b5998;
+}
+
+nav.redes-sociales a:nth-child(2):hover {
+    color: #00acee;
+}
+
+nav.redes-sociales a:nth-child(3):hover {
+    color: #c8232c;
+}
+
+nav.redes-sociales a:nth-child(4):hover {
+    color: #c4302b;
+}
+
+nav.redes-sociales a:nth-child(5):hover {
+    color: #3f729b;
 }
 
 div.informacion-evento {
@@ -498,6 +543,244 @@ p.numero {
     font-size: 4em;
     display: block;
     margin: 0 0 10px 0;
+    font-family: 'Oswald';
+}
+
+div.tabla-precio p.numero {
+    color: black;
+    margin: 20px 0;
+}
+
+
+/*Tabla de precios*/
+
+ul.lista-precios>li {
+    padding: 10px;
+}
+
+ul.lista-precios {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+div.tabla-precio {
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+div.tabla-precio ul li {
+    width: 100%;
+    font-family: 'PT Sans';
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+}
+
+div.tabla-precio ul li::before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 20px;
+    color: green;
+    -webkit-font-smoothing: antialiased;
+}
+
+div.tabla-precio h3 {
+    font-family: 'Oswald';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+div.tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0 0 20px #666;
+}
+
+
+/*Mapa*/
+
+div.mapa {
+    width: 100%;
+    background-color: green;
+    height: 400px;
+}
+
+
+/*Testimoniales*/
+
+div.testimoniales {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+div.testimonial {
+    width: 33%;
+}
+
+div.testimonial:hover blockquote {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+blockquote {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding-bottom: 20px;
+    transition: all .3s ease-in-out;
+}
+
+blockquote p {
+    text-align: justify !important;
+    font-size: .9em !important;
+    font-family: 'PT Sans', sans-serif;
+    padding: 0 20px 0 65px;
+}
+
+blockquote p::before {
+    content: '\201c';
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 8rem;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    color: #fe4918;
+}
+
+div.testimonial footer img {
+    width: 22%;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+div.testimonial footer cite {
+    font-size: 1rem;
+    padding-left: 10px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    font-style: normal;
+    color: #fe4918;
+    font-weight: normal;
+}
+
+
+/*Newsletter*/
+
+div.newsletter {
+    position: relative;
+    height: auto;
+}
+
+div.newsletter::before {
+    background-image: url(../img/bg-newsletter.jpg);
+    content: '';
+}
+
+div.newsletter .contenido {
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+div.newsletter .contenido h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-family: 'PT Sans', sans-serif;
+}
+
+div.newsletter .contenido p {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+
+/*Cuenta regresiva*/
+
+div.cuenta-regresiva ul li {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    float: left;
+    width: 25%;
+}
+
+
+/*Footer*/
+
+footer.site-footer {
+    background-color: #323232;
+    padding-top: 40px;
+    margin-top: 20px;
+}
+
+footer .contenedor>div {
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    text-align: justify;
+    width: 33.3%;
+    float: left;
+}
+
+footer h3 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+footer h3 span {
+    color: #fe4918;
+}
+
+footer .ultimos-tweets li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+footer nav.redes-sociales {
+    text-align: left;
+}
+
+
+/*CP*/
+
+p.cp {
+    background-color: rgb(14, 13, 13);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
 
@@ -507,30 +790,57 @@ p.numero {
     div.invitado {
         width: 50%;
     }
+    div.testimonial {
+        width: 50%;
+    }
+    ul.lista-precios {
+        justify-content: center;
+    }
+    /*Testimoniales*/
+    div.testimonial {
+        width: 100%;
+    }
+    /*Numeros de los días que faltan*/
+    /*Footer*/
+    footer .contenedor>div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+footer nav.redes-sociales {
+    text-align: center;
 }
 
 @media screen and (max-width: 480px) {
+    div.invitados {
+        width: 100%;
+    }
     div.invitado {
         width: 100%;
     }
-}
-
-
-/*MQ ESPECIALES PARA LOS INVITADOS*/
-
-
-/*MQ propios*/
-
-@media only screen and (min-width:992px) {
-    .contenedor {
-        width: 90%;
-        max-width: 1100px;
+    div.testimonial {
+        width: 100%;
     }
-    div.programa-evento {
-        width: 50%;
+    div.tabla-precio {
+        width: 100%;
     }
-    div.invitado {
-        width: 33%;
+    div.cuenta-regresiva ul li {
+        width: 100%;
+    }
+    /*MQ ESPECIALES PARA LOS INVITADOS*/
+    /*MQ propios*/
+    @media only screen and (min-width:992px) {
+        .contenedor {
+            width: 90%;
+            max-width: 1100px;
+        }
+        div.programa-evento {
+            width: 50%;
+        }
+        div.invitado {
+            width: 33%;
+        }
     }
 }
 
@@ -582,6 +892,10 @@ p.numero {
     }
     ul.resumen-evento li {
         width: 25%;
+    }
+    ul.lista-precios>li {
+        float: left;
+        width: 33.3%;
     }
 }
 
